@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: db2ce25bf4586784eaaea66b26c9be4b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - emptyIconTexture: {fileID: 2800000, guid: 0358aeafcbe8c9e429e2b389a3241997, type: 3}
+  - blobAutoTileLayout: {fileID: 11400000, guid: 0f025f66865c69240add34b4c61044f6,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

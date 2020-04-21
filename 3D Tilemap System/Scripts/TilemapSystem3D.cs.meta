@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 7040d198a41a5574bbbcfda0058a088d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - legacyShader: {fileID: 4800000, guid: 5594d6040eb13d54db5449d867e57ea0, type: 3}
+  - universalShader: {fileID: 4800000, guid: 0400508317e303b4683b2d7fa99ba81e, type: 3}
+  - tilemapData: {instanceID: 0}
+  - tilemapTexture: {instanceID: 0}
+  - tilesetTexture: {instanceID: 0}
+  - layerArrayTexture: {instanceID: 0}
+  - renderMaterial: {instanceID: 0}
+  - defaultColorTexture: {fileID: 2800000, guid: fc2536f26d8023b49872f89b877b5a4d,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
