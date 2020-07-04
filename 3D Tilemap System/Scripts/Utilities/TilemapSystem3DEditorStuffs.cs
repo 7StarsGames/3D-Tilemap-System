@@ -443,60 +443,6 @@ namespace UnityEngine.TilemapSystem3D
         }
 
         /// <summary>
-        /// Copy a tilemap slice and save into a Texture2D.
-        /// </summary>
-        private Texture2D GetTexture3DSlice(Texture3D texture, int depth)
-        {
-            // Creates the temporary Texture2D
-            Texture2D tempTexture = new Texture2D(texture.width, texture.height, texture.format, false)
-            {
-                name = "Slice Texture",
-                filterMode = FilterMode.Point,
-                wrapMode = TextureWrapMode.Clamp,
-                anisoLevel = 0
-            };
-
-            // Copy the 3D texture slice color to the temporary Texture2D
-            for (int i = 0; i < texture.width; i++)
-            {
-                for (int j = 0; j < texture.height; j++)
-                {
-                    Color32 tempColor = texture.GetPixel(i, j, depth);
-                    tempTexture.SetPixel(i, j, tempColor);
-                }
-            }
-
-            // Apply the changes to the temporary Texture2D and return
-            tempTexture.Apply();
-            return tempTexture;
-        }
-
-        /// <summary>
-        /// Paste a Texture2D to a tilemap slice.
-        /// </summary>
-        private void SetTexture3DSlice(Texture2D sourceTex2D, Texture3D targetTex3D, int depth)
-        {
-            // Get the color of the source Texture2D
-            Color32[] newColor = sourceTex2D.GetPixels32();
-
-            // Used to access each index of the color array
-            int index = 0;
-
-            // Paste the Texture2D color into the tilemap slice pixel by pixel
-            for (int i = 0; i < targetTex3D.width; i++)
-            {
-                for (int j = 0; j < targetTex3D.height; j++)
-                {
-                    targetTex3D.SetPixel(j, i, depth, newColor[index]);
-                    index++;
-                }
-            }
-
-            // Apply the changes to the tilemap texture
-            targetTex3D.Apply();
-        }
-
-        /// <summary>
         /// Copy the tilemap slice of the selected layer and save it temporarily into the clipboard property of the TilemapData
         /// </summary>
         public void CopyTilemapLayer(int layer)

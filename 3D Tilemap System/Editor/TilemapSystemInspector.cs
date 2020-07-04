@@ -603,7 +603,7 @@ public class TilemapSystemInspector : Editor
         m_showAboutGroup.isExpanded = EditorGUILayout.BeginFoldoutHeaderGroup(m_showAboutGroup.isExpanded, "About");
         if (m_showAboutGroup.isExpanded)
         {
-            EditorGUILayout.HelpBox("3D Tilemap System v1.0.0 by Seven Stars Games", MessageType.None);
+            EditorGUILayout.HelpBox("3D Tilemap System v1.0.1 by Seven Stars Games", MessageType.None);
             if (GUILayout.Button(m_guiContent[18]))
             {
                 Application.OpenURL("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=S8AB7CVH5VMZS&source=url");
@@ -707,7 +707,7 @@ public class TilemapSystemInspector : Editor
             // Pickup the tile
             if (m_target.toolIndex == 1)
             {
-                m_target.PickupTile((int) hitCoord.x, (int) hitCoord.y, m_target.layerIndex);
+                m_target.tileIndex =  m_target.PickupTile((int) hitCoord.x, (int) hitCoord.y, m_target.layerIndex);
                 m_isPaintingEvent = false;
                 Repaint();
             }
